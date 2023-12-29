@@ -29,7 +29,7 @@ enum CalculatorButton: String {
         case .plus: return "+"
         case .minus: return "-"
         case .multiply: return "x"
-        case .divide: return "%"
+        case .divide: return "/"
         case .decimal: return "."
         case .plusMinus: return "+/-"
         case . percent: return "%"
@@ -46,13 +46,24 @@ enum CalculatorButton: String {
             return Color(.lightGray)
         default:
             return .orange
-            
-        
         }
     }
 }
 
+// Env object
+// You can treat this as the Global Application State
+class GlobalEnvironment: ObservableObject {
+    @Published var display = ""
+    
+    func receiveInput(calculatorButton: CalculatorButton) {
+        self.display = calculatorButton.title
+    }
+}
+
 struct ContentView: View {
+    
+    @EnvironmentObject var env: GlobalEnvironment
+    
     let buttons: [[CalculatorButton]] = [
         [.ac, .plusMinus, .percent, .divide],
         [.seven, .eight, .nine, .multiply],
@@ -67,7 +78,7 @@ struct ContentView: View {
             VStack (spacing: 12){
                 HStack {
                     Spacer()
-                    Text("44")
+                    Text(env.display)
                         .foregroundStyle(.white)
                         .font(.system(size: 64))
                 }
@@ -75,17 +86,7 @@ struct ContentView: View {
                 ForEach(buttons, id: \.self) { row in
                     HStack (spacing: 12) {
                         ForEach(row, id: \.self) { button in
-                            Button(action: {}, label: {
-                                Text(button.title)
-                                     .font(.system(size: 32))
-                                     .frame(width: buttomWidth(button: button), height: (UIScreen.main.bounds.width - 5 * 12) / 4)
-                                     .foregroundColor(.white)
-                                     .background(button.backgroundColor)
-                                     .cornerRadius(buttomWidth(button: button))
-                            })
-                            
-                            
-                         
+                            CalculatorButtonView(button: button)
                         }
                     }
                 }
@@ -93,8 +94,29 @@ struct ContentView: View {
             .padding(.bottom)
         }
     }
+}
+
+struct CalculatorButtonView: View {
     
-    func buttomWidth(button: CalculatorButton) -> CGFloat {
+    var button: CalculatorButton
+    
+    @EnvironmentObject var env: GlobalEnvironment
+    
+    
+    var body: some View {
+        Button(action: {
+            self.env.receiveInput(calculatorButton: button)
+        }) {
+            Text(button.title)
+                 .font(.system(size: 32))
+                 .frame(width: buttomWidth(button: button), height: (UIScreen.main.bounds.width - 5 * 12) / 4)
+                 .foregroundColor(.white)
+                 .background(button.backgroundColor)
+                 .cornerRadius(buttomWidth(button: button))
+        }
+    }
+    
+    private func buttomWidth(button: CalculatorButton) -> CGFloat {
         if button == .zero {
             return (UIScreen.main.bounds.width - 4 * 12) / 4 * 2
         }
@@ -102,6 +124,7 @@ struct ContentView: View {
     }
 }
 
+
 #Preview {
-    ContentView()
+    ContentView().environmentObject(GlobalEnvironment())
 }

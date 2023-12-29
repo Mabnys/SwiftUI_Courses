@@ -11,7 +11,8 @@ import SwiftUI
 struct CalculatorSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // Create the SwiftUI view that provides the window contents
+            ContentView().environmentObject(GlobalEnvironment())
         }
     }
 }
