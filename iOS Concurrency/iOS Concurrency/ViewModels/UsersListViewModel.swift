@@ -13,30 +13,38 @@ class UsersListViewModel: ObservableObject {
     @Published var showAlert = false
     @Published var errorMessage: String?
     
-    func fetchUsers() {
+    @MainActor //This MainActor attribute is used to dispatch the task back onto the main queue
+    func fetchUsers() async {
         let apiService = APIService(urlString: "https://jsonplaceholder.typicode.com/users")
         isLoading.toggle() // true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // This could be removed. It's just for testing purposes
-            apiService.getJSON { (result: Result<[User], APIError>) in
-                defer {
-                    DispatchQueue.main.async { // we're using it because isLoading is on a background thread and we're using a published property
-                        self.isLoading.toggle() // false
-                    }
-                }
-                switch result {
-                case .success(let users):
-                    DispatchQueue.main.async {
-                        self.users = users
-                    }
-                case .failure(let error):
-//                    print(error)
-                    DispatchQueue.main.async {
-                        self.showAlert = true
-                        self.errorMessage = error.localizedDescription + "\nPlease contact the developer and provide this error and the steps to reproduce."
-                    }
-                }
-            }
+        defer {
+            isLoading.toggle() // false
         }
+        do {
+            users = try await apiService.getJSON()
+        } catch {
+            showAlert = true
+            errorMessage = error.localizedDescription + "\nPlease contact the developer and provide this error and the steps to reproduce."
+        }
+        #warning("THIS getJSON func needs to be commented out for now. To be keep for reference")
+//        apiService.getJSON { (result: Result<[User], APIError>) in
+//            defer {
+//                DispatchQueue.main.async { // we're using it because isLoading is on a background thread and we're using a published property
+//                    self.isLoading.toggle() // false
+//                }
+//            }
+//            switch result {
+//            case .success(let users):
+//                DispatchQueue.main.async {
+//                    self.users = users
+//                }
+//            case .failure(let error):
+//                DispatchQueue.main.async {
+//                    self.showAlert = true
+//                    self.errorMessage = error.localizedDescription + "\nPlease contact the developer and provide this error and the steps to reproduce."
+//                }
+//            }
+//        }
     }
 }
 

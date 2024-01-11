@@ -39,8 +39,9 @@ struct UsersListView: View {
             })
             .navigationTitle("Users")
             .listStyle(.plain)
-            .onAppear {
-                vm.fetchUsers()
+            .task {
+                // We made onAppear Asynchronous because the func fetchUsers() is one. To do so, we added a Task (an asynchronous unit of work) around the func and await the result. Notice that we don't have any try here because all of the possible errors were caught in the fetchUsers(). Let's combine both onAppear and task by removing .onAppear to only have .task. This is made possible from iOS 15.
+                    await vm.fetchUsers()
             }
         }
     }
