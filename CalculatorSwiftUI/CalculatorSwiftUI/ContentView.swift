@@ -62,6 +62,9 @@ class GlobalEnvironment: ObservableObject {
     var currentOperation: Operation = .none
     var runningNumber = 0
     
+    var canTakeDecimal: Bool = true
+    var canTakeMinus: Bool = true
+    
     
     func receiveInput(calculatorButton: CalculatorButton) {
         self.display = calculatorButton.title
