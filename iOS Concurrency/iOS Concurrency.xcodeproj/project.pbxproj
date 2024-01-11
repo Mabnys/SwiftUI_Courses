@@ -24,6 +24,7 @@
 		72FE4D7F2B4F37AA00E0BA90 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE4D7E2B4F37AA00E0BA90 /* MockData.swift */; };
 		72FE4D812B4F3BDF00E0BA90 /* PostsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE4D802B4F3BDF00E0BA90 /* PostsListViewModel.swift */; };
 		72FE4D832B4F3D4000E0BA90 /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE4D822B4F3D4000E0BA90 /* PostsListView.swift */; };
+		72FE4D852B50783C00E0BA90 /* UserAndPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE4D842B50783C00E0BA90 /* UserAndPosts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		72FE4D7E2B4F37AA00E0BA90 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		72FE4D802B4F3BDF00E0BA90 /* PostsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListViewModel.swift; sourceTree = "<group>"; };
 		72FE4D822B4F3D4000E0BA90 /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
+		72FE4D842B50783C00E0BA90 /* UserAndPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAndPosts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			children = (
 				72FE4D6C2B4F096700E0BA90 /* User.swift */,
 				72FE4D6E2B4F0AB100E0BA90 /* Post.swift */,
+				72FE4D842B50783C00E0BA90 /* UserAndPosts.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72FE4D852B50783C00E0BA90 /* UserAndPosts.swift in Sources */,
 				72FE4D432B4F066E00E0BA90 /* UsersListView.swift in Sources */,
 				72FE4D7D2B4F2E2900E0BA90 /* Bundle+Extension.swift in Sources */,
 				72FE4D762B4F268F00E0BA90 /* UsersListViewModel.swift in Sources */,

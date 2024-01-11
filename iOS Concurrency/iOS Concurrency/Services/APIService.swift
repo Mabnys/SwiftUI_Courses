@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// This is reusable for future projects
 struct APIService {
     let urlString: String
     
@@ -38,7 +38,7 @@ struct APIService {
         }
     }
   
-    // It's an asynchronous
+    // It's an asynchronous func that's executing on a background thread. It is also a generic function to handle the different API endpoints and models, and use a Result based completion handler with our designed API error.
     func getJSON<T: Decodable>(dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .deferredToDate,
                                keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys,
                                completion: @escaping (Result<T,APIError>) -> Void) {
