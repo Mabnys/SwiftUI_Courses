@@ -8,7 +8,7 @@
 import Foundation
 
 // Source: https://jsonplaceholder.typicode.com/users
-
+// Data Object (value type)
 struct User: Codable, Identifiable {
     let id: Int
     let name: String

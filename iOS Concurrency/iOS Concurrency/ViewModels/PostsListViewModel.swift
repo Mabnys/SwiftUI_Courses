@@ -6,8 +6,9 @@
 //
 
 import Foundation
-
+// Life-cycle Object (reference type, observer)
 class PostsListViewModel: ObservableObject {
+    // State / Dependencies
     @Published var posts: [Post] = []
     @Published var isLoading = false
     @Published var showAlert = false
@@ -15,6 +16,7 @@ class PostsListViewModel: ObservableObject {
     var userId: Int?
     
     @MainActor //This MainActor attribute is used to dispatch the task back onto the main queue
+    // Actions / Task
     func fetchPosts() async { // Anytime we have concurrency, we need to specify that our function is asychronous
         if let userId = userId {
             let apiService = APIService(urlString: "https://jsonplaceholder.typicode.com/users/\(userId)/posts")

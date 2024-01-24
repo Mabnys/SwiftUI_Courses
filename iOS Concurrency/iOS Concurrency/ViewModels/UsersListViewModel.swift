@@ -6,15 +6,16 @@
 //
 
 import Foundation
-
+// Life-cycle Object (reference type, observer)
 class UsersListViewModel: ObservableObject {
+    // State / Dependencies
     @Published var usersAndPosts: [UserAndPosts] = []
     @Published var isLoading = false
     @Published var showAlert = false
     @Published var errorMessage: String?
     
     @MainActor //This MainActor attribute is used to dispatch the task back onto the main queue
-    func fetchUsers() async {
+    func fetchUsers() async { // Actions / Task
         let apiService = APIService(urlString: "https://jsonplaceholder.typicode.com/users")
         let apiService2 = APIService(urlString: "https://jsonplaceholder.typicode.com/posts")
         isLoading.toggle() // true

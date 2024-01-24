@@ -9,7 +9,7 @@ import Foundation
 
 // Source: https://jsonplaceholder.typicode.com/posts
 // Single User's Posts: https://jsonplaceholder.typicode.com/users/1/posts
-
+// Data Object (value type)
 struct Post: Codable, Identifiable {
     let userId: Int
     let id: Int

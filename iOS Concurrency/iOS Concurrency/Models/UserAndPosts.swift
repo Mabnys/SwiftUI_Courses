@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// Data Object (value type)
 struct UserAndPosts: Identifiable {
     var id = UUID()
     let user: User
