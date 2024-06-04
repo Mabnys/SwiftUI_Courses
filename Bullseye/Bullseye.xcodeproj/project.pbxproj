@@ -16,6 +16,7 @@
 		72ABDFD62C0F8618008D69FF /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ABDFD52C0F8618008D69FF /* TextViews.swift */; };
 		72ABDFD82C0F8F26008D69FF /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ABDFD72C0F8F26008D69FF /* Shapes.swift */; };
 		72ABDFDA2C0F9D5A008D69FF /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ABDFD92C0F9D5A008D69FF /* RoundedViews.swift */; };
+		72ABDFDC2C0FA4FE008D69FF /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ABDFDB2C0FA4FE008D69FF /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		72ABDFD52C0F8618008D69FF /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
 		72ABDFD72C0F8F26008D69FF /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		72ABDFD92C0F9D5A008D69FF /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
+		72ABDFDB2C0FA4FE008D69FF /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				72ABDFD52C0F8618008D69FF /* TextViews.swift */,
 				72ABDFD72C0F8F26008D69FF /* Shapes.swift */,
 				72ABDFD92C0F9D5A008D69FF /* RoundedViews.swift */,
+				72ABDFDB2C0FA4FE008D69FF /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				72ABDFDA2C0F9D5A008D69FF /* RoundedViews.swift in Sources */,
 				72ABDFC42C0E50EF008D69FF /* BullseyeApp.swift in Sources */,
 				72ABDFD62C0F8618008D69FF /* TextViews.swift in Sources */,
+				72ABDFDC2C0FA4FE008D69FF /* BackgroundView.swift in Sources */,
 				72ABDFD82C0F8F26008D69FF /* Shapes.swift in Sources */,
 				72ABDFC72C0E518E008D69FF /* Game.swift in Sources */,
 				72ABDFB42C0E0E9B008D69FF /* ContentView.swift in Sources */,
