@@ -15,6 +15,7 @@
 		72ABDFCF2C0EBDDE008D69FF /* BullseyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ABDFCE2C0EBDDE008D69FF /* BullseyeTests.swift */; };
 		72ABDFD62C0F8618008D69FF /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ABDFD52C0F8618008D69FF /* TextViews.swift */; };
 		72ABDFD82C0F8F26008D69FF /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ABDFD72C0F8F26008D69FF /* Shapes.swift */; };
+		72ABDFDA2C0F9D5A008D69FF /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ABDFD92C0F9D5A008D69FF /* RoundedViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		72ABDFCE2C0EBDDE008D69FF /* BullseyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeTests.swift; sourceTree = "<group>"; };
 		72ABDFD52C0F8618008D69FF /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
 		72ABDFD72C0F8F26008D69FF /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		72ABDFD92C0F9D5A008D69FF /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				72ABDFB32C0E0E9B008D69FF /* ContentView.swift */,
 				72ABDFD52C0F8618008D69FF /* TextViews.swift */,
 				72ABDFD72C0F8F26008D69FF /* Shapes.swift */,
+				72ABDFD92C0F9D5A008D69FF /* RoundedViews.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72ABDFDA2C0F9D5A008D69FF /* RoundedViews.swift in Sources */,
 				72ABDFC42C0E50EF008D69FF /* BullseyeApp.swift in Sources */,
 				72ABDFD62C0F8618008D69FF /* TextViews.swift in Sources */,
 				72ABDFD82C0F8F26008D69FF /* Shapes.swift in Sources */,
