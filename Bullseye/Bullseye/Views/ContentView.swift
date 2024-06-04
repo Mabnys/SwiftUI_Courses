@@ -72,3 +72,8 @@ struct ContentView: View {
 #Preview {
   ContentView()
 }
+#Preview {
+  ContentView()
+    .preferredColorScheme(.dark)
+    .previewDevice("iPhone 14 Pro Max")
+}
