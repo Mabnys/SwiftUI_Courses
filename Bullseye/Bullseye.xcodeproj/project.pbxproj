@@ -86,8 +86,8 @@
 			children = (
 				72ABDFB72C0E0E9C008D69FF /* Bullseye.entitlements */,
 				72ABDFC52C0E5152008D69FF /* App */,
-				72ABDFC12C0E4FF4008D69FF /* Views */,
 				72ABDFC02C0E4FE3008D69FF /* Models */,
+				72ABDFC12C0E4FF4008D69FF /* Views */,
 				72ABDFB82C0E0E9C008D69FF /* Preview Content */,
 			);
 			path = Bullseye;
