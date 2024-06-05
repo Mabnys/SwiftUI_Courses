@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		726D82BB2C101A820095C0D3 /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726D82BA2C101A820095C0D3 /* PointsView.swift */; };
+		726D82BD2C10CF700095C0D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726D82BC2C10CF700095C0D3 /* Constants.swift */; };
 		72ABDFB42C0E0E9B008D69FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ABDFB32C0E0E9B008D69FF /* ContentView.swift */; };
 		72ABDFB62C0E0E9C008D69FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72ABDFB52C0E0E9C008D69FF /* Assets.xcassets */; };
 		72ABDFBA2C0E0E9C008D69FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72ABDFB92C0E0E9C008D69FF /* Preview Assets.xcassets */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		726D82BA2C101A820095C0D3 /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
+		726D82BC2C10CF700095C0D3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		72ABDFAE2C0E0E9B008D69FF /* Bullseye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bullseye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72ABDFB32C0E0E9B008D69FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		72ABDFB52C0E0E9C008D69FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				72ABDFD92C0F9D5A008D69FF /* RoundedViews.swift */,
 				72ABDFDB2C0FA4FE008D69FF /* BackgroundView.swift */,
 				726D82BA2C101A820095C0D3 /* PointsView.swift */,
+				726D82BC2C10CF700095C0D3 /* Constants.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				72ABDFD82C0F8F26008D69FF /* Shapes.swift in Sources */,
 				72ABDFC72C0E518E008D69FF /* Game.swift in Sources */,
 				72ABDFB42C0E0E9B008D69FF /* ContentView.swift in Sources */,
+				726D82BD2C10CF700095C0D3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
