@@ -17,6 +17,8 @@
 
 Your First iOS & SwiftUI App.
 
+[Link to the mockup using Figma](https://www.figma.com/design/3MBMeYd2hP4rajTbHnZL0z/Bullseye?node-id=6-388)
+
 ***Note that the content is from the Kodeco's bootcamp.***
 
 ### *- Must Haves (An App from Scratch):*
