@@ -8,22 +8,25 @@
 import SwiftUI
 
 struct LeaderboardView: View {
-    var body: some View {
-      ZStack {
-        Color("BackgroundColor")
-          .ignoresSafeArea()
-        VStack(spacing: 10) {
-          HeaderView()
-          LabelView()
-          RowView(index: 1, score: 10, date: Date())
-        }
+  @Binding var leaderboardIsShowing: Bool
+  
+  var body: some View {
+    ZStack {
+      Color("BackgroundColor")
+        .ignoresSafeArea()
+      VStack(spacing: 10) {
+        HeaderView(leaderboardIsShowing: $leaderboardIsShowing)
+        LabelView()
+        RowView(index: 1, score: 10, date: Date())
       }
     }
+  }
 }
 
 struct HeaderView: View {
   @Environment(\.verticalSizeClass) var verticalSizeClass
   @Environment(\.horizontalSizeClass) var horizontalSizeClass
+  @Binding var leaderboardIsShowing: Bool
   
   var body: some View {
     ZStack {
@@ -36,7 +39,7 @@ struct HeaderView: View {
       HStack {
         Spacer()
         Button {
-          
+          leaderboardIsShowing = false
         } label: {
           RoundedImageViewFilled(systemName: "xmark")
         }
@@ -67,30 +70,31 @@ struct RowView: View {
   let score: Int
   let date: Date
   
-    var body: some View {
-      HStack {
-        RoundedTextView(text: String(index))
-        Spacer()
-        ScoreText(score: score)
-          .frame(width: Constants.Leaderboard.scoreColumnWidth)
-        Spacer()
-        DateText(date: date)
-          .frame(width: Constants.Leaderboard.dateColumnWidth)
-      }
-      .background(
-        RoundedRectangle(cornerRadius: .infinity)
-          .strokeBorder(Color("LeaderboardRowColor"), lineWidth: Constants.General.strokeWidth)
-      )
-      .padding(.horizontal)
-      .frame(maxWidth: Constants.Leaderboard.maxRowWidth)
+  var body: some View {
+    HStack {
+      RoundedTextView(text: String(index))
+      Spacer()
+      ScoreText(score: score)
+        .frame(width: Constants.Leaderboard.scoreColumnWidth)
+      Spacer()
+      DateText(date: date)
+        .frame(width: Constants.Leaderboard.dateColumnWidth)
     }
+    .background(
+      RoundedRectangle(cornerRadius: .infinity)
+        .strokeBorder(Color("LeaderboardRowColor"), lineWidth: Constants.General.strokeWidth)
+    )
+    .padding(.horizontal)
+    .frame(maxWidth: Constants.Leaderboard.maxRowWidth)
+  }
 }
 
 struct LeaderboardView_PreviewViews: PreviewProvider {
+  static private var leaderboardIsShowing = Binding.constant(false)
   static var previews: some View {
-    LeaderboardView()
+    LeaderboardView(leaderboardIsShowing: leaderboardIsShowing)
       .previewInterfaceOrientation(.landscapeRight)
-    LeaderboardView()
-    .preferredColorScheme(.dark)
+    LeaderboardView(leaderboardIsShowing: leaderboardIsShowing)
+      .preferredColorScheme(.dark)
   }
 }
