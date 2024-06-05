@@ -31,7 +31,7 @@ Your First iOS & SwiftUI App.
 - [x] Calculate and display the score.
 
 ### *- Nice to Haves (Polishing the App):*
-- [ ] Implement multiple rounds.
-- [ ] Implement restarting the game
+- [x] Implement multiple rounds.
+- [x] Implement restarting the game
 - [ ] Add the leaderboard screen
 - [ ] Make the app look pretty :]
