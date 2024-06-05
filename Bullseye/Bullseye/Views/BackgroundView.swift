@@ -29,10 +29,13 @@ struct TopView: View {
   
   var body: some View {
     HStack(spacing: 10) {
-      RoundedImageViewStroked(systemName: "arrow.counterclockwise")
+      Button {
+        game.restart()
+      } label: {
+        RoundedImageViewStroked(systemName: "arrow.counterclockwise")
+      }
       Spacer()
       RoundedImageViewFilled(systemName: "list.dash")
-
     }
   }
 }
@@ -45,11 +48,11 @@ struct BottomView: View {
       NumberView(title: "Score", text: String(game.score))
       Spacer()
       NumberView(title: "Round", text: String(game.round))
-
+      
     }
   }
 }
-                                                          
+
 struct NumberView: View {
   var title: String
   var text: String
