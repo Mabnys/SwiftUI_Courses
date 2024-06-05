@@ -36,4 +36,4 @@ Your First iOS & SwiftUI App.
 - [x] Implement multiple rounds.
 - [x] Implement restarting the game
 - [ ] Add the leaderboard screen
-- [ ] Make the app look pretty :]
+- [x] Make the app look pretty :]
