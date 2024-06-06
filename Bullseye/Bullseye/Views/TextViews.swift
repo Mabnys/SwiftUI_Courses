@@ -50,6 +50,8 @@ struct LabelText: View {
   
   var body: some View {
     Text(text.uppercased())
+      .kerning(1.5)
+      .font(.caption)
       .bold()
       .foregroundColor(Color("TextColor"))
   }
