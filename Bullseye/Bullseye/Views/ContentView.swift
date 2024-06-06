@@ -55,6 +55,17 @@ struct SliderView: View {
       SliderLabelText(text: "1")
         .frame(width: 35)
       Slider(value: $sliderValue, in: 1.0...100.0)
+        .onAppear {
+          let renderer = ImageRenderer(
+            content: Image(systemName: "target")
+              .foregroundColor(.red)
+              .font(.largeTitle)
+              .background(Color("BackgroundColor"))
+          )
+          if let thumbImage = renderer.uiImage {
+            UISlider.appearance().setThumbImage(thumbImage, for: .normal)
+          }
+        }
       SliderLabelText(text: "100")
         .frame(width: 35)
     }
