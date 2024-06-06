@@ -35,5 +35,5 @@ Your First iOS & SwiftUI App.
 ### *- Nice to Haves (Polishing the App):*
 - [x] Implement multiple rounds.
 - [x] Implement restarting the game
-- [ ] Add the leaderboard screen
+- [x] Add the leaderboard screen
 - [x] Make the app look pretty :]
