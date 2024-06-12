@@ -91,6 +91,61 @@ let studentBeforeAuthor = student < author // This is the solution
 // let studentBeforeAuthor = student > author // We could also use ">"
 
 
+// Logical Operators: !, ??, ||
+/*
+ Logical operators let you check if at least one boolean value in the whole set is true,
+ if all boolean values in a set are true,
+ or even the check if a boolean value is not true.
+ Logical operators only work for booleans. */
 
+let passingGrades = 50
+let studentGrades = 50
+let chrisGrades = 49
+let samGrades = 99
 
+let studentsPassed = studentGrades >= passingGrades
+let chrisPassed = chrisGrades >= passingGrades
+let samPassed = samGrades >= passingGrades
+
+// Not operator "!"
+!samPassed
+!chrisPassed // is the same as writing this expression "chrisPassed == false"
+
+let catNames = "Ozma"
+// !catNames // Error here "Cannot convert value of type 'String' to expected argument type 'Bool'" because Logical operators only work for booleans.
+
+// AND operator: "&&"
+
+let bothPassed = chrisPassed && samPassed
+
+// OR operator: "||"
+let eitherPassed = chrisPassed || samPassed
+let anyonePassed = chrisPassed || samPassed || studentsPassed
+let everyonePassed = chrisPassed && samPassed && studentsPassed
+
+let meritAwardGrade = 90
+let samHasPerfectAttendance = true
+let samIsMeritStudent = samHasPerfectAttendance && samGrades > meritAwardGrade
+
+let chrisHasPerfectAttendance = true
+let chrisIsMeritStudent = chrisHasPerfectAttendance && chrisGrades > meritAwardGrade
+
+if chrisIsMeritStudent {
+  print("Congratulations!")
+}
+else {
+  print("Keep studying.")
+}
+
+var betterStudent: String
+if samGrades > chrisGrades {
+  betterStudent = "Sam"
+}
+else {
+  betterStudent = "Chris"
+}
+
+// Ternary conditional operator: expression ? true-value : false-value
+
+betterStudent = samGrades > chrisGrades ? "Sam" : "Chris"
 
