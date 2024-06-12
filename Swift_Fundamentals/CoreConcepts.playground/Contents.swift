@@ -170,3 +170,55 @@ if myAges >= 13 && myAges <= 19 {
 let teenagerNames = myAges >= 13 && myAges <= 19 ? "Chris" : "Not me!"
 print(teenagerNames)
 
+// Optionals: "?"
+/*
+ Optionals in Swift let us represent either a value,
+ or the absence of a value, which is called "nil".
+ Optionals all have a type.
+ */
+
+var petName: String?
+petName = "Mango"
+print(petName)
+petName = nil
+
+//Unwrapping Optionals: we want to get to the actual real value inside the variable and see if we can work with it.
+var result: Int? = 30 // Note that we can NOT use type inference to shorten up our code when we create optionals.
+print(result)
+//print(result + 1) // Error: "Value of optional type 'Int?' must be unwrapped to a value of type 'Int'. Solution: use "force unwrapping""
+
+// force unwrapping "!"
+/*
+ Force unwrapping is the easiest to unwrap an optional and the most dangerous
+ if we don't pass in a value, let's say petName = nil, we will get a fatal error that would crash our app.
+ Therefore, we should only use force unwrapping when we absolutely know an optional has a value.
+ */
+petName = "Mango"
+var petAge: Int? = 2
+var unwrappedPetName = petName!
+print("The pet's name is \(unwrappedPetName)")
+
+// There are other ways to safely unwrap optionals. The first one we will share is "optional binding".
+//1- Optional Binding:
+/*
+ Optional binding looks very similar to "if else" statement.
+ When we use optional binding, it's very common to name the constant as the same as the optional we're unwrapping.
+ With optional binding, we can unwrap multiple things at the same time, one right after the other, let's say petName and petAge.
+ */
+
+// The constant petName only exists within this (if else) block of code. It won't conflict with a variable called "petName".
+if let petName = petName, /* This line equals to this: if petName != nil { let unwrappedPetName = petName }
+                           if this optional is not nil, which means it has a value, store the value in this new constant. We're binding the value to the constant. And this technique is called "shadowing". */
+    let petAge = petAge {
+    print("The pet is \(petName) and they are \(petAge)")
+} else {
+  print("No pet name or age")
+}
+
+//2- Nil Coaleasing:"??"
+/*
+ 
+ */
+var optionalInt: Int? = nil //10
+var requiredResult = optionalInt ?? 0
+
