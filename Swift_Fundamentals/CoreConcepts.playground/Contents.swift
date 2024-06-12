@@ -318,4 +318,10 @@ let (_, keynoteDay, _, keynoteDescription) = namedSpecialDate
 var iPhoneDay = (month: 9, day: 10, year: 2019, name: "iPhone Day")
 iPhoneDay.name = "Time to buy a new iPhone"
 
+// - Arrays
+//let pastries: [String] = ["cookie", "cupcake", "donut", "pie"]
+var pastries: [String] = []
+pastries.append("cookie")
+pastries.append("danish")
+pastries += ["cupcake", "donut", "pie", "brownie"]
 
