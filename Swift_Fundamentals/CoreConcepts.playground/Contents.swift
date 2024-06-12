@@ -15,6 +15,10 @@ let goodByeMessage = "See you soon!"
  print(goodByeMessage)
 
 // Booleans & Comparison Operators
+/*
+ Booleans in Swift are used to represent true or false values,
+ making them suitable for conditions and logic.
+ */
 
 //let yes: Bool = true
 let yes = true
@@ -115,6 +119,10 @@ let catNames = "Ozma"
 // !catNames // Error here "Cannot convert value of type 'String' to expected argument type 'Bool'" because Logical operators only work for booleans.
 
 // AND operator: "&&"
+/*
+ The "&&" operator represents the logical AND operator in Swift,
+ requiring both conditions to be true for the result to be true.
+ */
 
 let bothPassed = chrisPassed && samPassed
 
@@ -175,6 +183,8 @@ print(teenagerNames)
  Optionals in Swift let us represent either a value,
  or the absence of a value, which is called "nil".
  Optionals all have a type.
+ Other words, In swift, an optional represents a value that may or may not be present,
+ allowing for the handling of potentially absent values.
  */
 
 var petName: String?
