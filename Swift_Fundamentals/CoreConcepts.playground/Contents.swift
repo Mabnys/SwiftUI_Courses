@@ -264,7 +264,7 @@ let parsedInt = Int("10") /* parseInt is an optional. Swift implicitly creates p
 let newParseInt = Int("cat") // newParseInt is implicitly created as optional. Here, Swift can't convert cat to an integer and it sets the value to nil.
 
 
-// Control Flow
+// Beginning Collections
 // - Tuples
 //                 0       1
 let studentMark: (String, Int) = ("Chris", 49)
@@ -279,5 +279,43 @@ name
 mark
 pet
 
+// - Challenge: Tuples
+
+// Challenge 1-
+/*
+ Declare a constant tuple named specialDate that contains three Int values followed by a String. Use this to represent a date (month, day, year) followed by a word you might associate with that day.
+ */
+
+// Solution 1:
+let specialDate = (6, 3, 2019, "WWDC")
+
+// Challenge 2-
+/*
+ Create another tuple, but this time name the constituent components.
+ Give them names related to the data that they contain: month, day, year and description.
+ */
+
+// Solution 2:
+let namedSpecialDate = (month: 6, day: 3, year: 2019, name: "WWDC") // Note that this tuple has exactly the same data as challenge 1's data, but in this format, it's much easier to reference.
+
+// Challenge 3-
+/*
+ In on line, read the day and description values into two constants.
+ You'll need to use the underscore to ignore the month and year.
+ */
+
+// Solution 3:
+let (_, keynoteDay, _, keynoteDescription) = namedSpecialDate
+
+// Challenge 4-
+/*
+ Up until now, you've only seen constant tuples. But you can create variable tuples, too.
+ Create one more tuple, like in the exercices above, but this time use var instead of let.
+ Now change the day to a new value.
+ */
+
+// Solution 4:
+var iPhoneDay = (month: 9, day: 10, year: 2019, name: "iPhone Day")
+iPhoneDay.name = "Time to buy a new iPhone"
 
 
