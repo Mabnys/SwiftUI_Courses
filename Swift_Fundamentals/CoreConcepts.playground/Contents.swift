@@ -263,3 +263,21 @@ let parsedInt = Int("10") /* parseInt is an optional. Swift implicitly creates p
 // Solution 3:
 let newParseInt = Int("cat") // newParseInt is implicitly created as optional. Here, Swift can't convert cat to an integer and it sets the value to nil.
 
+
+// Control Flow
+// - Tuples
+//                 0       1
+let studentMark: (String, Int) = ("Chris", 49)
+studentMark.0
+studentMark.1
+let studentData = (name: "Chris", mark: 49, petName: "Mango")
+studentData.name
+studentData.mark
+studentData.petName
+let (name, mark, pet) = studentData
+name
+mark
+pet
+
+
+
