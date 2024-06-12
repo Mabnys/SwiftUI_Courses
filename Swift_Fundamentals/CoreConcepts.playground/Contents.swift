@@ -222,3 +222,34 @@ if let petName = petName, /* This line equals to this: if petName != nil { let u
 var optionalInt: Int? = nil //10
 var requiredResult = optionalInt ?? 0
 
+// Challenge: Optionals
+
+/* Challenge 1-
+ You've been provided with a constant below, hasAllergies, which has been set to true.
+ Below that, declare an Optional String variable named dogNames.
+ On the next line, use a ternary conditional operator to set the value of dogName to nil if hasAllergies is true, and to "Mango" otherwise.
+ */
+
+// Solution 1:
+let hasAllergies = true
+let dogNames: String?
+dogNames = hasAllergies ? nil : "Mango"
+
+/* Challenge 2-
+ Create a constant called parsedInt and set it to Int("10"). Swift will attempt to parse the string 10 and convert it to an Int.
+ Place your mouse over the constant name and use Option-Click to check the of parsedInt.
+ Why is parsedInt an optional here?
+ */
+
+// Solution 2:
+let parsedInt = Int("10") /* parseInt is an optional. Swift implicitly creates parseInt as an optional, just in case it can't convert what's
+                           inside the string. Here Swift will convert the string "10" to an Int and it set the value to 10.
+                           */
+
+/* Challenge 3-
+ Create another constant named newParsedInt and set it equal to Int("cat")
+ What will the value of 'newParsedInt' be? Why?*/
+
+// Solution 3:
+let newParseInt = Int("cat") // newParseInt is implicitly created as optional. Here, Swift can't convert cat to an integer and it sets the value to nil.
+
