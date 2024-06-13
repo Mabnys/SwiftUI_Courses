@@ -357,7 +357,40 @@ pastrie
 pastrie.swapAt(1, 2)
 print(pastrie)
 
+// - Challenge: Arrays
 
+// Challenge 1-
+/*
+ Using the players array below, and the array methods and properties you learned about in this video, determine the following things about the array:
+ (a) The count of elements in the array (b) Wheter or not the array contains the String value "Charles" (c) The first element in the array (d) The last element in the array
+ */
 
+// Solution 1:
+var players = ["Alice", "Bob", "Dan", "Eli", "Frank"]
+players.count // (a)
+players.contains("Charles") //(b)
+players.first // (c)
+players.last // (d)
+
+// Challenge 2-
+/*
+ Some new players have joined the game: Charles, Gloria and Hermione. You'd like to add them to the array; Gloria and Hermione at the end, and Charles somewhere in the middle.
+ (a) Insert Charles at index 2 in the array. (b) Add Gloria and Hermione at the end of the array in a single line of code.
+ */
+
+// Solution 2:
+players.insert("Charles", at: 2)
+players += ["Gloria","Hermione"]
+print(players)
+
+// Challenge 3-
+/*
+ Create another new constant array named teamOne that consists of the last four members of the players array;
+ that would be the range of elements from 4...7
+ */
+
+// Solution 3:
+let teamOne = Array(players[4...7])
+print(teamOne)
 
 
