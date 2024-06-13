@@ -401,3 +401,33 @@ print(players)
 // Solution 3:
 let teamOne = Array(players[4...7])
 print(teamOne)
+
+// Control Flow
+
+// - While Loops
+
+var i = 1
+while i < 10  { // is the same as i <= 9
+  print(i)
+  i += 1
+}
+
+print("Counting up again")
+i = 1
+repeat {
+  print(i)
+  i += 1
+} while i < 10
+          
+i = 10
+while i < 10  { // This code never executes!
+  print(i)
+  i += 1
+}
+
+print("Counting up again")
+i = 10
+repeat {
+  print(i) // up to this code is executed once only!
+  i += 1
+} while i < 10
