@@ -266,6 +266,10 @@ let newParseInt = Int("cat") // newParseInt is implicitly created as optional. H
 
 // Beginning Collections
 // - Tuples
+/*
+ Tuples in Swift are primarily used to group related data together into a single unit,
+ making it convenient to work with multiple values as a whole.
+ */
 //                 0       1
 let studentMark: (String, Int) = ("Chris", 49)
 studentMark.0
@@ -319,6 +323,11 @@ var iPhoneDay = (month: 9, day: 10, year: 2019, name: "iPhone Day")
 iPhoneDay.name = "Time to buy a new iPhone"
 
 // - Arrays
+/*
+ An array in Swift in an ordered list of values of the same type,
+ where each values has an index.
+ The popLast() method is used to remove the last element from an array in Swift.
+ */
 //let pastries: [String] = ["cookie", "cupcake", "donut", "pie"]
 var pastries: [String] = []
 pastries.append("cookie")
@@ -392,5 +401,3 @@ print(players)
 // Solution 3:
 let teamOne = Array(players[4...7])
 print(teamOne)
-
-
