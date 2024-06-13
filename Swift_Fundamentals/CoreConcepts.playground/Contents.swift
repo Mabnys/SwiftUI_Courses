@@ -325,3 +325,39 @@ pastries.append("cookie")
 pastries.append("danish")
 pastries += ["cupcake", "donut", "pie", "brownie"]
 
+var pastrie: [String] = ["cookie", "cupcake", "donut", "pie"]
+// Subcripting is used her to get an element from a specific location
+pastrie[0]
+// pastrie[10] // fatal error: Index out of range
+
+let firstThree = pastrie[1...3] // this creates an "ArraySlice", which is slightly different than an array. It's a stored reference to a part of an array.
+// firstThree[0] // fatal error: Index out of range
+
+let firstThrees = Array(pastrie[1...3])
+firstThrees[0]
+pastrie.append("eclair")
+//pastrie.removeAll()
+pastrie.isEmpty
+pastrie.count
+pastrie.first
+if let first = pastrie.first {
+  print(first)
+}
+
+pastrie.contains("donut")
+pastrie.contains("lasagna")
+pastrie.insert("tart", at: 0)
+let removedTwo = pastrie.remove(at: 2)
+let removedLast = pastrie.removeLast()
+removedTwo
+removedLast
+pastrie[0...1] = ["brownie", "fritter", "tart"]
+pastrie
+
+pastrie.swapAt(1, 2)
+print(pastrie)
+
+
+
+
+
