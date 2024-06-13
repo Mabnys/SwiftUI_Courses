@@ -73,6 +73,7 @@ catName > dogName /* It is "true" because catName comes first then dogName.
  Then, create a constant named isVotingAge that uses Boolean logic to determine if the value stored in myAge denotes someone of voting age.
  In my part of the world, the voting age is 18, so I'll use that here. */
 
+print("Solution 1")
 // Solution 1:
 let myAge = 29
 let isVotingAge = myAge >= 18
@@ -81,6 +82,7 @@ let isVotingAge = myAge >= 18
  Next, create a constant named author and set its value to "Matt Galloway", the original author of these exercices.
  Then, create a third constant named authorIsStudent that uses string equality to determine if the values of student and author are equal. */
 
+print("Solution 2")
 // Solution 2:
 let student = "Mamadou Balde"
 let author = "Matt Galloway"
@@ -163,6 +165,7 @@ betterStudent = samGrades > chrisGrades ? "Sam" : "Chris"
  Feel free to change the value of this constant to match your actual age.
  Use that constant to create an if-else statement to print out "Teenager" if the value of myAge is greater or than 13 but less than or equal to 19, and to print out "Not a teenager" if the value is outside that range. */
 
+print("Solution 1")
 // Solution 1:
 let myAges = 29
 if myAges >= 13 && myAges <= 19 {
@@ -174,6 +177,7 @@ if myAges >= 13 && myAges <= 19 {
 /* Challenge 2- Create a constant named teenagerName, and use a ternary conditional operator to set the value of teenagerName to your own name as a string if the value of myAge, declared above, is greater than or equal to 13, but less than or equal to 19, and to set the value of teenagerName to "Not me!" if the value is outside that range.
  Then print out the value of teenagerName. */
 
+print("Solution 2")
 // Solution 2:
 let teenagerNames = myAges >= 13 && myAges <= 19 ? "Chris" : "Not me!"
 print(teenagerNames)
@@ -240,6 +244,7 @@ var requiredResult = optionalInt ?? 0
  On the next line, use a ternary conditional operator to set the value of dogName to nil if hasAllergies is true, and to "Mango" otherwise.
  */
 
+print("Solution 1")
 // Solution 1:
 let hasAllergies = true
 let dogNames: String?
@@ -251,6 +256,7 @@ dogNames = hasAllergies ? nil : "Mango"
  Why is parsedInt an optional here?
  */
 
+print("Solution 2")
 // Solution 2:
 let parsedInt = Int("10") /* parseInt is an optional. Swift implicitly creates parseInt as an optional, just in case it can't convert what's
                            inside the string. Here Swift will convert the string "10" to an Int and it set the value to 10.
@@ -260,6 +266,7 @@ let parsedInt = Int("10") /* parseInt is an optional. Swift implicitly creates p
  Create another constant named newParsedInt and set it equal to Int("cat")
  What will the value of 'newParsedInt' be? Why?*/
 
+print("Solution 3")
 // Solution 3:
 let newParseInt = Int("cat") // newParseInt is implicitly created as optional. Here, Swift can't convert cat to an integer and it sets the value to nil.
 
@@ -290,6 +297,7 @@ pet
  Declare a constant tuple named specialDate that contains three Int values followed by a String. Use this to represent a date (month, day, year) followed by a word you might associate with that day.
  */
 
+print("Solution 1")
 // Solution 1:
 let specialDate = (6, 3, 2019, "WWDC")
 
@@ -299,6 +307,7 @@ let specialDate = (6, 3, 2019, "WWDC")
  Give them names related to the data that they contain: month, day, year and description.
  */
 
+print("Solution 2")
 // Solution 2:
 let namedSpecialDate = (month: 6, day: 3, year: 2019, name: "WWDC") // Note that this tuple has exactly the same data as challenge 1's data, but in this format, it's much easier to reference.
 
@@ -308,6 +317,7 @@ let namedSpecialDate = (month: 6, day: 3, year: 2019, name: "WWDC") // Note that
  You'll need to use the underscore to ignore the month and year.
  */
 
+print("Solution 3")
 // Solution 3:
 let (_, keynoteDay, _, keynoteDescription) = namedSpecialDate
 
@@ -318,6 +328,7 @@ let (_, keynoteDay, _, keynoteDescription) = namedSpecialDate
  Now change the day to a new value.
  */
 
+print("Solution 4")
 // Solution 4:
 var iPhoneDay = (month: 9, day: 10, year: 2019, name: "iPhone Day")
 iPhoneDay.name = "Time to buy a new iPhone"
@@ -374,6 +385,7 @@ print(pastrie)
  (a) The count of elements in the array (b) Wheter or not the array contains the String value "Charles" (c) The first element in the array (d) The last element in the array
  */
 
+print("Solution 1")
 // Solution 1:
 var players = ["Alice", "Bob", "Dan", "Eli", "Frank"]
 players.count // (a)
@@ -387,6 +399,7 @@ players.last // (d)
  (a) Insert Charles at index 2 in the array. (b) Add Gloria and Hermione at the end of the array in a single line of code.
  */
 
+print("Solution 2")
 // Solution 2:
 players.insert("Charles", at: 2)
 players += ["Gloria","Hermione"]
@@ -398,6 +411,7 @@ print(players)
  that would be the range of elements from 4...7
  */
 
+print("Solution 3")
 // Solution 3:
 let teamOne = Array(players[4...7])
 print(teamOne)
@@ -431,3 +445,61 @@ repeat {
   print(i) // up to this code is executed once only!
   i += 1
 } while i < 10
+
+// - Challenge: While Loops
+
+// Challenge 1-
+/*
+ Your first challenge is to create a loop that counts up from zero to nine.
+ Create a variable named count and set it equal to 0.
+ Next, create a While loop with the condition count < 10.
+ Inside the loop, print out "Counting up: X" (where X is replaced with the count value) and then increment count by 1.
+ Explain why the final value of count and the value in the last line printed out are different.
+ */
+
+print("Solution 1")
+// Solution 1:
+var count = 0
+while count < 10 {
+  print("Counting up: \(count)")
+  count += 1
+}
+count
+
+// Challenge 2-
+/*
+ Now that you've counted up, it's time to count down.
+ Build a repeat-while loop that will count down the current value of count from Challenge 1, to one.
+ First, print "Counting down: X", where X is the value of count inside the loop; then, decrement count.
+ What are the 3 different loop conditions you could use with this loop, and get the same result?
+ */
+
+print("Solution 2")
+// Solution 2:
+repeat {
+  print("Counting down: \(count)")
+  count -= 1
+} while count > 0 // is the same as count >= 1 or count != 0 (this one though is dangerous because it will end up with infinite loop when we reach negative numbers
+
+// Challenge 3-
+/*
+ You're going to build a dice simulator, that will continue to roll until you get a six.
+ Create a variable named rollCount and set it equal to 0.
+ Create another named roll and set it equal to zero.
+ Create a repeat-while loop.
+ Inside the loop, to simulate the roll of a single die, set roll equal to the function Int.random(in: 1...6), which says "pick a random number between 1 and 6".
+ Then increment rollCount by 1.
+ Finally, print "Roll X gives you a Y" (where X is the value of rollCount and Y is the value of roll).
+ Set the loop condition so that the repeat while loop finishes when the first 6 is rolled.
+ */
+
+print("Solution 3")
+// Solution 3:
+var rollCount = 0
+var roll = 0
+repeat {
+  roll = Int.random(in: 1...6)
+  rollCount += 1
+  print("Roll \(rollCount) gives you a \(roll)")
+} while roll != 6 // Theoretically this might give an infinite loop, but it unlikely that random number generator here will never deliver one of the values in this range within a reasonable number of tries.
+
