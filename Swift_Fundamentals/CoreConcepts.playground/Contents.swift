@@ -586,3 +586,24 @@ var randomCount = Int.random(in: 1...5)
 for _ in 1...randomCount {
   print("Mamadou")
 }
+
+// Iterating Collections
+
+let daysOfTheWeek: [String] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+let poolTemperatures: [Int] = [78, 81, 74, 80, 79, 83, 84]
+
+for i in 0..<daysOfTheWeek.count { // Note that if we use the 0...daysOfTheWeek.count will get a fatal error: array out of bound.
+  print("\(daysOfTheWeek[i]): \(poolTemperatures[i])")
+}
+
+for i in 0..<daysOfTheWeek.count where poolTemperatures[i] >= 80 {
+  print("\(daysOfTheWeek[i]): \(poolTemperatures[i])")
+}
+
+var sums = 0
+for temperature in poolTemperatures {
+  sums += temperature
+}
+sums / poolTemperatures.count
+
+
