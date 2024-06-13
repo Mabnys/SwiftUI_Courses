@@ -503,3 +503,35 @@ repeat {
   print("Roll \(rollCount) gives you a \(roll)")
 } while roll != 6 // Theoretically this might give an infinite loop, but it unlikely that random number generator here will never deliver one of the values in this range within a reasonable number of tries.
 
+
+// For Loops
+
+let closedRange = 0...5 // This is a range from zero to five inclusive, that means it includes 5.
+let halfOpenRange = 0..<5 // Note that we can't make a range that counts down, only up. Therefore the first number (0) must be equal or less than the second number (5)
+
+var usefulValue = 5
+let closeRange = 0...usefulValue
+let halfedOpenRange = 0..<usefulValue
+
+var sum = 0
+let counts = 10
+for i in 1...counts {
+  sum += i
+}
+print(sum)
+
+for _ in 1...counts {
+  print("roar")
+}
+
+for _ in 1...counts where counts > 100 { // THIS code won't execute because i is less 100, which is 10
+  print("roar")
+}
+
+for i in 1...counts {
+  print("\(i) is an odd number.")
+}
+5 % 2
+for i in 1...counts where i % 2 == 1 {
+  print("\(i) is an odd number.")
+}
