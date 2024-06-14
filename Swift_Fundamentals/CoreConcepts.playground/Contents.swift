@@ -805,6 +805,8 @@ print("----")
  empty, to see how many key value pairs they contain, or even to see if a dictionary contains a particular value,
  or after.
  But unlike arrays, dictionaries are a bit more flexible, when you ask a dictionary for something it does not contain.
+ Dictionaries in Swift are used to store a collection of key-value pairs.
+ The removeValue(forKey:) method is used to remove a key-value pair from a Swift dictionary by specifying the key.
  */
 
 var emptyDictionary: [String: Int] = [:]
@@ -918,6 +920,7 @@ print("-----")
 // Working with Sets
 /*
  A set is an unordered collection of unique values, of the same type.
+ Sets in Swift store only unique values, which means each value appears at most once in a set.
  */
 
 // Creating and Populating Sets
@@ -1013,3 +1016,33 @@ mythicalPets.formUnion(animalPets)
 print(mythicalPets)
 
 print("----")
+
+// Functions & Named Typed
+/*
+ Named Tpes: have names when they're difined!
+ - Structures
+ - Classes
+ - Enumerations
+ - Protocols
+ 
+ Compound Types: unnamed! Defined by the types they contain.
+ Tuple              Type Signature
+ (3, 17, 8)         (Int, Int, Int)
+ ("Hello!", true)   (String, Bool)
+ (3.14, (32,9))     (Double, (Int, Int))
+ 
+ func amountOff() -> Int {
+  abs(target - sliderValueRounded())
+ }
+ 
+ Value Types      VS.     Reference Types
+ - Structures             - Classes
+ - Tuples                 - Functions
+ 
+ Classes
+ Structures        VS.     Classes
+ - value type               - reference type
+ - values                   - objects
+ - copy                     - share
+ - immutable                - mutable
+ */
