@@ -941,3 +941,75 @@ print(intersection)
 print(difference)
 print(union)
 print(someSet)
+
+print("---")
+
+// - Challenge: Sets
+
+/*
+ Note about different ways to create sets:
+ The first way puts the members of the set right in the initializer; the second initializes an empty set and then calls
+ .insert() to insert individual members into the set.
+*/
+var mythicalPets: Set<String> = [
+  "🦉 Owl",
+  "🧳 Luggage",
+  "🔨 Hammer",
+  "🦷 Toothless",
+  "🪽 Flying Nimbus"
+]
+print(mythicalPets)
+
+var animalPets = Set<String>()
+animalPets.insert("🥭 Mango")
+animalPets.insert("🐅 Tiger")
+animalPets.insert("🦷 Toothless")
+animalPets.insert("🦉 Owl")
+print(animalPets)
+
+print("-----")
+
+// Challenge 1-
+/*
+Use the .union() method to show the combined set of pets between mythicalPets and
+ animalPets. Print the resulting set to the console.
+ */
+
+print("Solution 1")
+// Solution 1:
+print(mythicalPets.union(animalPets))
+print("-----")
+
+// Challenge 2-
+/*
+ Use the .intersection() method to find out which pets exist in both mythicalPets and animalPets.
+ Print the resulting set to the console.
+ */
+
+// Solution 2:
+print(animalPets.intersection(mythicalPets))
+
+print("----")
+
+// Challenge 3-
+/*
+ The only pet in these two sets that actually exists in real life is "Mango". Remove her from the appropriate set with the
+ .remove() method and capture the removed element in a constant named removedPet.
+ */
+
+// Solution 3:
+let removedPet = animalPets.remove("🥭 Mango")
+print("-----")
+
+// Challenge 4-
+/*
+ Since you've removed Mango, all of the pets in both sets are technically mythical pets. Use .formUnion
+ to mutute the mythicalPets set to contain the combination of both sets of pets.
+ Print the new mythicalPets set to the console to check your work.
+ */
+
+// Solution 4:
+mythicalPets.formUnion(animalPets)
+print(mythicalPets)
+
+print("----")
