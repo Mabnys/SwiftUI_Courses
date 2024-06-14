@@ -801,6 +801,10 @@ print("----")
  Dictionaries are really useful when we want to look up values by means of their identifier. And their keys are unique
  but different keys can point to the same value. All of the keys must be of the same type.
  Keys can be any type! Keys have no order!
+ Dictionaries have many of the same qualities as arrays. We can use their built-in methods to check to see if they're
+ empty, to see how many key value pairs they contain, or even to see if a dictionary contains a particular value,
+ or after.
+ But unlike arrays, dictionaries are a bit more flexible, when you ask a dictionary for something it does not contain.
  */
 
 var emptyDictionary: [String: Int] = [:]
@@ -815,3 +819,27 @@ namesAndPets.updateValue("Owl", forKey: "Ron")
 namesAndPets["Ron"] = "🦉 Owl"
 print(namesAndPets)
 
+print("---")
+
+// Accessing & Working with Dictionaries
+namesAndPets["Rincewind"]
+namesAndPets["Captain Ahab"] // Captain Ahab is not a key in our dictionary, thus we will get a nil.
+let captainAhabPet = namesAndPets["Captain Ahab"] ?? "No white whale for Captain Ahab"
+namesAndPets.isEmpty
+namesAndPets.count
+namesAndPets.removeValue(forKey: "Goku")
+namesAndPets["Hiccup"] = nil
+print(namesAndPets)
+for (character, pet) in namesAndPets {
+  print("\(character) has a \(pet)")
+}
+for (name,_) in namesAndPets {
+  print(name)
+}
+print("---")
+for name in namesAndPets.keys {
+  print(name)
+}
+for pet in namesAndPets.values {
+  print(pet)
+}
