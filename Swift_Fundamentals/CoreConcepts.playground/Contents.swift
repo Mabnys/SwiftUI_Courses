@@ -588,6 +588,16 @@ for _ in 1...randomCount {
 }
 
 // Iterating Collections
+/*
+ A "for-in" loop in Swift is used to iterate over a sequence, such as an array or a range, and execute a block of code
+ for each element.
+ The primary role of a "for-in" loop in Swift, when iterating through a collection, is to simplify access to array
+ elements and maintain their order.
+ The main purpose of using a "for-in" loop to iterate over a collection in Swift is to process each element in the
+ collection, such as performing operations or transformations.
+ In Swift, the "break" statement within a nested loop allows you to terminate the inner loop and continue to the outer
+ loop iteration.
+ */
 
 let daysOfTheWeek: [String] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 let poolTemperatures: [Int] = [78, 81, 74, 80, 79, 83, 84]
