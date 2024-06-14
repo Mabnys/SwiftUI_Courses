@@ -640,3 +640,70 @@ for pastry in pastriess {
 for pastry in pastriess where pastry[pastry.startIndex] == "c" {
   print(pastry)
 }
+
+// Nested Loops & Early Exit
+
+let daysOfTheWeeks: [String] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+let poolsTemperatures: [Int] = [78, 81, 74, 80, 79, 83, 84]
+
+for i in 0..<daysOfTheWeeks.count {
+  if daysOfTheWeeks[i] == "Thursday" {
+    break // break stops the loop entirely
+  }
+  print("\(daysOfTheWeeks[i]): \(poolsTemperatures[i])")
+}
+print("----")
+for i in 0..<daysOfTheWeeks.count {
+  if daysOfTheWeeks[i] == "Friday" {
+    print("I'm in love")
+    continue // continue only stops the current iteration and then goes back to looping
+  }
+  print("\(daysOfTheWeeks[i]): \(poolsTemperatures[i])")
+}
+print("----")
+
+for floor in 11...15 {
+  print(floor)
+}
+print("----")
+for floor in 11...15 {
+  for room in 1...4 {
+    print("\(floor)-\(room)")
+  }
+}
+print("----")
+for floor in 11...15 {
+  for room in 1...4 {
+    if room == 1 {
+      continue // this continue statement only breaks the inner loop; it does not affect the outer loop
+    }
+    print("\(floor)-\(room)")
+  }
+}
+print("----")
+for floor in 11...15 {
+  if floor == 13 {
+    continue
+  }
+  for room in 1...4 {
+    if room == 1 {
+      continue
+    }
+    print("\(floor)-\(room)")
+  }
+}
+print("----")
+floor_loop: for floor in 11...15 { // floor_loop is a label
+  if floor == 13 {
+    continue
+  }
+room_loop: for room in 1...4 { // room_loop is also a label 
+    if room == 1 {
+      continue
+    }
+    if floor == 12 && room == 3 {
+      continue floor_loop
+    }
+    print("\(floor)-\(room)")
+  }
+}
