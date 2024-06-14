@@ -338,6 +338,7 @@ iPhoneDay.name = "Time to buy a new iPhone"
  An array in Swift in an ordered list of values of the same type,
  where each values has an index.
  The popLast() method is used to remove the last element from an array in Swift.
+ Indexes must be Ints and also must be sequential!
  */
 //let pastries: [String] = ["cookie", "cupcake", "donut", "pie"]
 var pastries: [String] = []
@@ -791,3 +792,26 @@ for day in dayOfTheWeek {
 }
 
 print("----")
+
+// More Collections
+
+// Creating & Populating Dictionaries
+/*
+ A dictionary is an unordered collection of pairs, where each pair is composed of a key and value.
+ Dictionaries are really useful when we want to look up values by means of their identifier. And their keys are unique
+ but different keys can point to the same value. All of the keys must be of the same type.
+ Keys can be any type! Keys have no order!
+ */
+
+var emptyDictionary: [String: Int] = [:]
+var namesAndPets = ["Ron": "🐀 Rat",
+                    "Rincewind": "🧳 Luggage",
+                    "Thor": "🔨 Hammer",
+                    "Goku": "🪽 Flying Nimbus"]
+print(namesAndPets)
+namesAndPets.updateValue("🥭 Mango", forKey: "Chris")
+namesAndPets["Calvin"] = "🐅 Tiger"
+namesAndPets.updateValue("Owl", forKey: "Ron")
+namesAndPets["Ron"] = "🦉 Owl"
+print(namesAndPets)
+
