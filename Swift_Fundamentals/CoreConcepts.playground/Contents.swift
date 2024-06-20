@@ -1046,3 +1046,11 @@ print("----")
  - copy                     - share
  - immutable                - mutable
  */
+
+// Introduction to Functions
+func printHello() {
+  print("Hello!")
+}
+printHello()
+
+
