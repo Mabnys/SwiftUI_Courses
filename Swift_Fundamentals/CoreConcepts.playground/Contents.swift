@@ -1053,4 +1053,88 @@ func printHello() {
 }
 printHello()
 
+print("----------------------------")
+// Progamming in Swift: Functions & Types
+
+// Functions
+
+// Introduction:
+/*
+                  Closures:
+ Closures                         Functions
+  NO                Names?          YES
+  NO                Argument        YES
+                    Labels?
+  NO             Default Parameter  YES
+                    Values?
+  YES              Write Inline?    NO
+ 
+{ (a: Int, b: Int)   Different      func multiply(a: Int, b: Int) -> Int
+ -> Int in            Syntax!         a * b
+  a * b                             }
+ }
+ */
+
+
+
+//: ## Episode 04: Overlaoads & Parameters
+// ---------------------------------------
+let passingsGrades = 50
+let jessyGrade = 49
+let ozmaGrade = 87
+let ozmaAllGrades = [60, 96, 87, 42]
+// ---------------------------------------
+//: ### Function overloads
+//: Overlaoading let you define similar functions that share a name
+
+//func getPassStatus(for grade: Int) -> Bool {
+//  grade >= passingsGrades
+//}
+
+//: Overload using Different Number of Parameters
+
+//func getPassStatus(for grade: Int, lowestPass: Int) -> Bool {
+//  grade >= lowestPass
+//}
+
+
+//: Use default values for parameters, instead of overloads, when you can
+
+func getPassStatus(for grade: Int, lowestPass: Int = passingsGrades) -> Bool {
+  grade >= passingsGrades
+}
+
+getPassStatus(for: ozmaGrade, lowestPass: 80)
+getPassStatus(for: jessyGrade)
+
+
+//: Overload using Different Parameter Types
+
+func getPassStatus(for grades: [Int]) -> Bool {
+  var totalGrade = 0
+  for grade in grades {
+    totalGrade += grade
+  }
+  let averageGrade = totalGrade / grades.count
+  return averageGrade >= passingsGrades
+}
+
+getPassStatus(for: ozmaAllGrades)
+//: Overload using Different Argument Labels, like Swift's stride functions
+
+
+
+// fancy separator for console readability
+print("\n ---// ------//--- \n")
+//: Overload using Different Return Types
+
+
+//: ### Variadic Parameters
+
+//: ### Inout Parameters
+// ---------------------------------------
+
+// ---------------------------------------
+
+
 
