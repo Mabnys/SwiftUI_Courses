@@ -33,29 +33,32 @@
 import SwiftUI
 
 struct ContentView: View {
-  let disciplines = ["statue", "mural", "plaque", "statue"]
+  let artworks = artData
+
   var body: some View {
     NavigationStack {
-      List(disciplines, id: \.self) { discipline in
-        NavigationLink(value: discipline) {
-          Text(discipline)
+      List(artworks) { artwork in
+        NavigationLink(value: artwork) {
+          Text(artwork.title)
         }
       }
-      .navigationDestination(for: String.self, destination: { discipline in
-        DetailView(discipline: discipline)
+      .navigationDestination(for: Artwork.self, destination: { artwork in
+        DetailView(artwork: artwork)
       })
-      .navigationBarTitle("Disciplines")
+      .navigationBarTitle("Artworks")
     }
   }
 }
 
 struct DetailView: View {
-  let discipline: String
+  let artwork: Artwork
+ 
   var body: some View {
-    Text(discipline)
-      .navigationBarTitle(Text(discipline), displayMode: .inline)
+  Text(artwork.title)
+    .navigationBarTitle(Text(artwork.title), displayMode: .inline)
   }
 }
+
 
 
 struct ContentView_Previews: PreviewProvider {

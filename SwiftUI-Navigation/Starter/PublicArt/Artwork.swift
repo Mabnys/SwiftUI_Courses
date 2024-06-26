@@ -34,6 +34,7 @@ import MapKit
 import SwiftUI
 
 struct Artwork {
+  let id = UUID()
   let artist: String
   let description: String
   let locationName: String
@@ -202,3 +203,16 @@ let artData = [
     reaction: "💕")
 ]
 // swiftlint:enable line_length
+
+extension Artwork: Hashable {
+  static func == (lhs: Artwork, rhs: Artwork) -> Bool {
+    lhs.id == rhs.id
+  }
+  
+  func hash(into hasher: inout Hasher) {
+    hasher.combine(id)
+  }
+}
+
+extension Artwork: Identifiable { }
+
