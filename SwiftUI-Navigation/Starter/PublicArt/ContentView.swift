@@ -46,6 +46,7 @@ struct ContentView: View {
       List(showArt) { artwork in
         NavigationLink(value: artwork) {
           Text("\(artwork.reaction) \(artwork.title)")
+            .onAppear { artwork.load() } // This calls load() only when the row of this Artwork is on the screen
             .contextMenu {
               Button("Love it: 💕") {
                 self.setReaction("💕", for: artwork)

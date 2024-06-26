@@ -43,6 +43,36 @@ struct Artwork {
   let imageName: String
   let coordinate: CLLocationCoordinate2D
   var reaction: String
+  
+  /*
+   It initialized all of the Artwork items. If there were 1,000 items, and each downloaded a large image or video file, it could be a problem for a mobile app.
+   Here’s a possible solution: Move the download activity to a helper method, and call this method only when the item appears on the screen.
+   */
+//  init(
+//    artist: String,
+//    description: String,
+//    locationName: String,
+//    discipline: String,
+//    title: String,
+//    imageName: String,
+//    coordinate: CLLocationCoordinate2D,
+//    reaction: String
+//  ) {
+//    print(">>>>> Downloading \(imageName) <<<<<")
+//    self.artist = artist
+//    self.description = description
+//    self.locationName = locationName
+//    self.discipline = discipline
+//    self.title = title
+//    self.imageName = imageName
+//    self.coordinate = coordinate
+//    self.reaction = reaction
+//  }
+  
+  func load() {
+    print(">>>>> Downloading \(self.imageName) <<<<<")
+  }
+
 }
 
 // swiftlint:disable line_length
