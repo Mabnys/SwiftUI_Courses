@@ -59,11 +59,11 @@ struct AdoptionFormView: View {
           emailValidator.email = ""
         } label: {
           Text("Adopt Me")
-            .buttonLabel()
         }
         .alert("Thank you!", isPresented: $showingAlert) {
           Button("OK", role: .cancel) {}
         }
+        .buttonStyle(PrimaryButtonStyle())
       }
       .frame(maxWidth: .infinity)
     }
