@@ -14,6 +14,7 @@
 		483763FE29FC216D0052BB18 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483763F929FC216D0052BB18 /* Artwork.swift */; };
 		4837640329FC23160052BB18 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4837640229FC23160052BB18 /* AppMain.swift */; };
 		48EA5FB429FC253900633322 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EA5FB329FC253900633322 /* ContentView.swift */; };
+		72AB2E932C2C71DD003DED7D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AB2E922C2C71DD003DED7D /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		483763F929FC216D0052BB18 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		4837640229FC23160052BB18 /* AppMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
 		48EA5FB329FC253900633322 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		72AB2E922C2C71DD003DED7D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4837640229FC23160052BB18 /* AppMain.swift */,
 				483763F929FC216D0052BB18 /* Artwork.swift */,
 				48EA5FB329FC253900633322 /* ContentView.swift */,
+				72AB2E922C2C71DD003DED7D /* DetailView.swift */,
 				483763F829FC216D0052BB18 /* MapView.swift */,
 				18D775C622AD944400AE281E /* Assets.xcassets */,
 				18D775CE22AD944400AE281E /* Info.plist */,
@@ -178,6 +181,7 @@
 				483763FD29FC216D0052BB18 /* MapView.swift in Sources */,
 				483763FE29FC216D0052BB18 /* Artwork.swift in Sources */,
 				48EA5FB429FC253900633322 /* ContentView.swift in Sources */,
+				72AB2E932C2C71DD003DED7D /* DetailView.swift in Sources */,
 				4837640329FC23160052BB18 /* AppMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
