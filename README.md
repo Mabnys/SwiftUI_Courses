@@ -43,4 +43,20 @@ Your First iOS & SwiftUI App.
 
 ## SwiftUI Tutorial: Navigation
 - In this tutorial, you’ll use SwiftUI to implement the navigation of a master-detail app.
+- In addition you will learn more about managing the flow of data in your app using property wrappers:
+- [x] *@State*,
+- [x] *@Binding*,
+- [x] *@ObservedObject*,
+- [x] *@EnvironmentObjects* etc.
 - You’ll learn how to implement a navigation stack, a navigation bar button, a context menu and a modal sheet. By [Fabrizio Brancati]().
+
+
+## SwiftUI View Modifiers Tutorial for iOS
+- In this tutorial, you'll learn how to refactor your code to create powerful custom SwiftUI view modifiers.
+- In this tutorial, you’ll use an app called **AdoptAPet**, a simple master-detail view app, meaning there is a master view that shows high-level information, in this case an adoptable furry friend’s picture and name, and then a detail view that displays when the user taps a list row.
+- You’ll refactor AdoptAPet as you learn how to use SwiftUI’s *ViewModifier* protocol for:
+- [x] Creating custom view modifiers.
+- [x] Building new **button styles**.
+- [x] Creating modifiers with **conditional parameters**.
+- [x] **Extending views** to create reusable components.
+- You’ll learn how to make your views look consistent and your code easier to read and maintain. By [Danijela Vrzan]().
