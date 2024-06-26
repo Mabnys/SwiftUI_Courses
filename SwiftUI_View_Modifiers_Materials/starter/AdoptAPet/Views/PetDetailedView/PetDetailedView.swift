@@ -44,10 +44,8 @@ struct PetDetailedView: View {
         VStack(alignment: .leading, spacing: 15) {
           ZStack(alignment: .bottom) {
             Image(pet.photo)
-              .resizable()
-              .scaledToFill()
-              .frame(maxWidth: geometry.size.width, maxHeight: 300)
-              .clipped()
+              .photoStyle(withMaxWidth: geometry.size.width)
+
             Rectangle()
               .overlay(alignment: .trailing) {
                 Text("Photo by \(pet.photoAuthor)")

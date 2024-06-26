@@ -128,7 +128,22 @@ extension TextField {
 
 
 // Image extension
-// TODO: 7
+extension Image {
+  // 1
+  func photoStyle(
+    withMaxWidth maxWidth: CGFloat = .infinity,
+    withMaxHeight maxHeight: CGFloat = 300
+  ) -> some View {
+    // 2
+    self
+      .resizable()
+      .scaledToFill()
+      // 3
+      .frame(maxWidth: maxWidth, maxHeight: maxHeight)
+      .clipped()
+  }
+}
+
 
 // CHALLENGE SOLUTION
 // View extension
