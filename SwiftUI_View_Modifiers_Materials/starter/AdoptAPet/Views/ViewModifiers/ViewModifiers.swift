@@ -34,6 +34,18 @@ import SwiftUI
 
 // Title ViewModifier
 // TODO: 1
+// 1
+struct DetailedInfoTitleModifier: ViewModifier {
+  // 2
+  func body(content: Content) -> some View {
+    content
+      // 3
+      .lineLimit(1)
+      .font(.title2)
+      .bold()
+  }
+}
+
 
 // Text extension
 // TODO: 2
