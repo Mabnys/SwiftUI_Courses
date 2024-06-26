@@ -13,13 +13,15 @@
 
 
 # 2024 iOS Bootcamp
+
+***Note that the content is from the Kodeco's bootcamp.***
+
+
 ## Bullseye App
 
 Your First iOS & SwiftUI App.
 
 [Link to the mockup using Figma](https://www.figma.com/design/3MBMeYd2hP4rajTbHnZL0z/Bullseye?node-id=6-388)
-
-***Note that the content is from the Kodeco's bootcamp.***
 
 ### *- Must Haves (An App from Scratch):*
 - [x] Add an instruction label.
@@ -37,3 +39,8 @@ Your First iOS & SwiftUI App.
 - [x] Implement restarting the game
 - [x] Add the leaderboard screen
 - [x] Make the app look pretty :]
+
+
+## SwiftUI Tutorial: Navigation
+- In this tutorial, you’ll use SwiftUI to implement the navigation of a master-detail app.
+- You’ll learn how to implement a navigation stack, a navigation bar button, a context menu and a modal sheet. By [Fabrizio Brancati]().
