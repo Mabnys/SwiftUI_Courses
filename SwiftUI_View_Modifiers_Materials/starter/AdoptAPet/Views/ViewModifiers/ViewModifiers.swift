@@ -51,11 +51,27 @@ extension Text {
   func detailedInfoTitle() -> some View {
     modifier(DetailedInfoTitleModifier())
   }
+  func buttonLabel() -> some View {
+    modifier(ButtonLabelModifier())
+  }
 }
 
 
 // Button Label Modifier
-// TODO: 3
+struct ButtonLabelModifier: ViewModifier {
+  func body(content: Content) -> some View {
+    content
+      .font(.title2)
+      .padding(.horizontal, 30)
+      .padding(.vertical, 8)
+      .foregroundColor(Color.pink)
+      .overlay(
+        RoundedRectangle(cornerRadius: 8)
+          .stroke(Color.pink, lineWidth: 1.5)
+      )
+  }
+}
+
 
 // Button Style
 // TODO: 4
