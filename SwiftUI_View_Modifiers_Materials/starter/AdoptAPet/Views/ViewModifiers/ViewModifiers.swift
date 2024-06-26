@@ -147,4 +147,16 @@ extension Image {
 
 // CHALLENGE SOLUTION
 // View extension
-// TODO: Challenge
+extension Text {
+  func prefixedWithSFSymbol(named name: String) -> some View {
+    HStack {
+      Image(systemName: name)
+        .resizable()
+        .scaledToFit()
+        .frame(width: 17, height: 17)
+      self
+    }
+    .padding(.leading, 12)
+  }
+}
+
