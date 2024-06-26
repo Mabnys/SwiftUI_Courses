@@ -42,6 +42,9 @@ struct AdoptionFormView: View {
     VStack(alignment: .leading) {
       Section {
         TextField("Email address", text: $emailValidator.email)
+          .validateEmail(value: emailValidator.email) { email in
+            emailValidator.isValid(email)
+          }
           .textFieldStyle(.roundedBorder)
           .padding()
           .autocorrectionDisabled()

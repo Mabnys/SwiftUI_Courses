@@ -102,10 +102,30 @@ struct PrimaryButtonStyle: ButtonStyle {
 
 
 // Email Validate View Modifier
-// TODO: 5
+// 1
+struct Validate: ViewModifier {
+  var value: String
+  var validator: (String) -> Bool
+
+  // 2
+  func body(content: Content) -> some View {
+    // 3
+    content
+      .border(validator(value) ? .green : .secondary)
+  }
+}
+
 
 // TextField extension
-// TODO: 6
+extension TextField {
+  func validateEmail(
+    value: String,
+    validator: @escaping (String) -> (Bool)
+  ) -> some View {
+    modifier(Validate(value: value, validator: validator))
+  }
+}
+
 
 // Image extension
 // TODO: 7
