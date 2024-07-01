@@ -33,6 +33,8 @@
 import SwiftUI
 
 struct ContentView : View {
+  @State var zoomed = false
+  
   var body: some View {
     VStack(spacing: 0) {
       Image("hero")
@@ -53,30 +55,36 @@ struct ContentView : View {
             .foregroundColor(.white)
         }
         .offset(
-          x: 30,
+          x: zoomed ? 500 : 30,
           y: -30
         )
-        .animation(.default)
+        .animation(.default, value: zoomed)
 
         GeometryReader { geometry in
           Image("thumb")
             .clipShape(
-              RoundedRectangle(cornerRadius: 500)
+              RoundedRectangle(cornerRadius: zoomed ? 40 : 500)
             )
             .overlay(
               Circle()
                 .fill(
-                  Color(white: 1, opacity: 0.4)
+                  zoomed
+                  ? Color.clear
+                  : Color(white: 1, opacity: 0.4)
                 )
                 .scaleEffect(0.8)
             )
             .saturation(0)
             .position(
-              x: 600,
+              x: zoomed ? geometry.frame(in: .local).midX : 600,
               y: 50
             )
-            .scaleEffect(1 / 3)
+            .scaleEffect((zoomed ? 4 : 1) / 3)
             .shadow(radius: 10)
+            .animation(.spring(), value: zoomed)
+            .onTapGesture {
+              zoomed.toggle()
+            }
         }
       }
       .background(Color(white: 0.1))
