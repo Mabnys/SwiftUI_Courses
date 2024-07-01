@@ -78,6 +78,7 @@ struct ContentView : View {
                 .scaleEffect(0.8)
             )
             .saturation(zoomed ? 1 : 0)
+            .rotationEffect(zoomed ? .zero : Angle(radians: 6 * .pi))
             .position(
               x: zoomed ? geometry.frame(in: .local).midX : 600,
               y: 50
