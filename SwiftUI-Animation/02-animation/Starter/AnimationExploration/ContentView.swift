@@ -61,10 +61,21 @@ struct ContentView: View {
     ]
   }
 
+  @State private var animateData = AnimationData.array[0]
   var body: some View {
     Circle()
       .scaleEffect(0.5)
-      .foregroundColor(.green)
+      .foregroundColor(animateData.color)
+      .animation(.default, value: animateData)
+      .offset(animateData.offset)
+      .padding()
+      .onAppear {
+        for (index, data) in AnimationData.array.enumerated().dropFirst() {
+          DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(index)) {
+            animateData = data
+          }
+        }
+      }
   }
 }
 
