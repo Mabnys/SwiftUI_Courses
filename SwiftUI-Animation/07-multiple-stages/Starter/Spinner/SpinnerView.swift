@@ -36,45 +36,68 @@ struct SpinnerView: View {
   struct Leaf: View {
     let rotation: Angle
     let isCurrent: Bool
-
+    let isCompleted: Bool
+    
     var body: some View {
       Capsule()
         .stroke(isCurrent ? Color.white : .gray, lineWidth: 8)
-        .frame(width: 20, height: 50)
+        .frame(width: 20, height: isCompleted ? 20 : 50)
         .offset(
           isCurrent
-            ? .init(width: 10, height: 0)
-            : .init(width: 40, height: 70)
+          ? .init(width: 10, height: 0)
+          : .init(width: 40, height: 70)
         )
         .scaleEffect(isCurrent ? 0.5 : 1)
-        .rotationEffect(rotation)
+        .rotationEffect(isCompleted ? .zero : rotation)
       // MARK: - Update deprecated `animation` modifier
       //        .animation(.easeIn(duration: 1.5))
       // Animate when `isCurrent` changes
+        .animation(.easeIn(duration: 1.5), value: isCompleted)
         .animation(.easeInOut(duration: 1.5), value: isCurrent)
     }
   }
-
+  
   let leavesCount = 12
   @State var currentIndex = -1
+  @State var completed = false
+  @State var isVisible = true
+  
+  let shoutUp = AnyTransition.offset(x: 0, y: -1000)
+    .animation(.easeIn(duration: 1))
   
   var body: some View {
     VStack {
-      ZStack {
-        ForEach(0..<leavesCount) { index in
-          Leaf(
-            rotation: .init(degrees: .init(index) / .init(leavesCount) * 360),
-            isCurrent: index == currentIndex
-          )
+      if isVisible {
+        ZStack {
+          ForEach(0..<leavesCount) { index in
+            Leaf(
+              rotation: .init(degrees: .init(index) / .init(leavesCount) * 360),
+              isCurrent: index == currentIndex, isCompleted: completed
+            )
+          }
         }
+        .transition(shoutUp)
+        .onAppear(perform: animate)
       }
-      .onAppear(perform: animate)
     }
   }
   
   func animate() {
+    var iteration = 0
     Timer.scheduledTimer(withTimeInterval: 0.15, repeats: true) { timer in
       currentIndex = (currentIndex + 1) % leavesCount
+      
+      iteration += 1
+      if iteration == 30 {
+        timer.invalidate()
+        completed = true
+        currentIndex = -1
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+          withAnimation {
+            isVisible = false
+          }
+        }
+      }
     }
   }
 }
