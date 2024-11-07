@@ -9,24 +9,24 @@ import SwiftUI
 
 struct ReviewListView: View {
   let movieID: UUID
-      @StateObject private var reviewViewModel = ReviewViewModel()
+  @StateObject private var reviewViewModel = ReviewViewModel()
+  
+  var body: some View {
+    VStack(alignment: .leading) {
+      Text("Reviews")
+        .font(.title2)
+        .padding(.top)
       
-      var body: some View {
-          VStack(alignment: .leading) {
-              Text("Reviews")
-                  .font(.title2)
-                  .padding(.top)
-              
-              ForEach(reviewViewModel.reviews) { review in
-                  ReviewRowView(review: review)
-              }
-          }
-          .onAppear {
-              reviewViewModel.fetchReviews(for: movieID)
-          }
+      ForEach(reviewViewModel.reviews) { review in
+        ReviewRowView(review: review)
       }
+    }
+    .onAppear {
+      reviewViewModel.fetchReviews(for: movieID)
+    }
+  }
 }
 
 #Preview {
-    ReviewListView(movieID: UUID())
+  ReviewListView(movieID: UUID())
 }

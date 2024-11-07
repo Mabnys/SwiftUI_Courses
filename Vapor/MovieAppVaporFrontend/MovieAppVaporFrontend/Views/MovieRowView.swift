@@ -11,13 +11,13 @@ struct MovieRowView: View {
   let movie: Movie
   
   var body: some View {
-      HStack {
-          Text(movie.title)
-              .font(.headline)
-          Spacer()
-          Text(String(format: "%.1f", movie.voteAverage))
-              .foregroundColor(.secondary)
-      }
+    HStack {
+      Text(movie.title)
+        .font(.headline)
+      Spacer()
+      Text(String(format: "%.1f", movie.voteAverage))
+        .foregroundColor(.secondary)
+    }
   }
 }
 

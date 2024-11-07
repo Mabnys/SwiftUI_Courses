@@ -11,20 +11,20 @@ struct ContentView: View {
   @StateObject private var movieViewModel = MovieViewModel()
   
   var body: some View {
-      NavigationView {
-          List(movieViewModel.movies) { movie in
-              NavigationLink(destination: MovieDetailView(movie: movie)) {
-                  MovieRowView(movie: movie)
-              }
-          }
-          .navigationTitle("Movies")
-          .onAppear {
-              movieViewModel.fetchMovies()
-          }
+    NavigationView {
+      List(movieViewModel.movies) { movie in
+        NavigationLink(destination: MovieDetailView(movie: movie)) {
+          MovieRowView(movie: movie)
+        }
       }
+      .navigationTitle("Movies")
+      .onAppear {
+        movieViewModel.fetchMovies()
+      }
+    }
   }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
 }
