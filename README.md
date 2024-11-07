@@ -60,3 +60,34 @@ Your First iOS & SwiftUI App.
 - [x] Creating modifiers with **conditional parameters**.
 - [x] **Extending views** to create reusable components.
 - You’ll learn how to make your views look consistent and your code easier to read and maintain. By [Danijela Vrzan]().
+
+ ## MovieApp Project
+ This project consists of two parts: a backend API (MovieAppVapor) and a frontend iOS app (MovieAppVaporFrontEnd).
+
+ ### MovieAppVapor (Backend)
+ MovieAppVapor is a Swift-based backend API built with the Vapor framework.
+ - Key Features:
+  - [x] CRUD operations for movies and reviews
+  - [x] Fluent ORM for database interactions
+  - [x] RESTful API for managing movies and reviews
+- API Endpoints:
+  - [x] GET /movies: Fetch all movies
+  - [x] POST /movies: Create a new movie
+  - [x] RESTful API for managing movies and reviews
+  - [x] GET /movies/:id: Fetch a specific movie
+  - [x] PUT /movies/:id: Update a movie
+  - [x] DELETE /movies/:id: Delete a movie
+  - [x] GET /reviews/movie/:movieID: Fetch reviews for a specific movie
+  - [x] POST /reviews: Create a new review
+
+  ### MovieAppVaporFrontEnd (iOS App)
+ MovieAppVaporFrontEnd is a SwiftUI-based iOS app that consumes the MovieAppVapor API.
+ - Key Features:
+  - [x] Display list of movies
+  - [x] SwiftUI views with MVVM architecture
+  - [x] Combine framework for network requests
+- API Endpoints:
+  - [x] GET /movies: Fetch all movies
+  - [x] GET /reviews/movie/:movieID: Fetch reviews for a specific movie
+
+Keep learning with [Mamadou A. Balde]().
