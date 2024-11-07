@@ -8,15 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
+  @StateObject private var movieViewModel = MovieViewModel()
+  
+  var body: some View {
+      NavigationView {
+          List(movieViewModel.movies) { movie in
+              NavigationLink(destination: MovieDetailView(movie: movie)) {
+                  MovieRowView(movie: movie)
+              }
+          }
+          .navigationTitle("Movies")
+          .onAppear {
+              movieViewModel.fetchMovies()
+          }
+      }
+  }
 }
 
 #Preview {
