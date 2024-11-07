@@ -19,11 +19,11 @@ class APIService {
             .eraseToAnyPublisher()
     }
     
-    func fetchReviews(for movieID: UUID) -> AnyPublisher<[Review], Error> {
-        let url = URL(string: "\(baseURL)/reviews/movie/\(movieID)")!
-        return URLSession.shared.dataTaskPublisher(for: url)
-            .map(\.data)
-            .decode(type: [Review].self, decoder: JSONDecoder())
-            .eraseToAnyPublisher()
-    }
+  func fetchReviews(for movieID: UUID) -> AnyPublisher<[Review], Error> {
+      let url = URL(string: "\(baseURL)/reviews/movie/\(movieID)")!
+      return URLSession.shared.dataTaskPublisher(for: url)
+          .map(\.data)
+          .decode(type: [Review].self, decoder: JSONDecoder())
+          .eraseToAnyPublisher()
+  }
 }

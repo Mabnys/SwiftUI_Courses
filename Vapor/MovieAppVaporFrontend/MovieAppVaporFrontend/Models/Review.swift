@@ -11,10 +11,8 @@ struct Review: Identifiable, Codable {
     let id: UUID?
     let content: String
     let rating: Int
-    let movieID: UUID
     
     enum CodingKeys: String, CodingKey {
         case id, content, rating
-        case movieID = "movie_id"
     }
 }

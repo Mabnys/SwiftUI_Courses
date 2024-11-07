@@ -23,5 +23,5 @@ struct ReviewRowView: View {
 }
 
 #Preview {
-    ReviewRowView(review: Review(id: UUID(), content: "This is a sample review.", rating: 4, movieID: UUID()))
+    ReviewRowView(review: Review(id: UUID(), content: "This is a sample review.", rating: 4))
 }
