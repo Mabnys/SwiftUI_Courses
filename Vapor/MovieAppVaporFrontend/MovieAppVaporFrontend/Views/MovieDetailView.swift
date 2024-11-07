@@ -44,7 +44,7 @@ struct MovieDetailView: View {
       }
       .padding()
     }
-    .navigationTitle("\(movie.title)'s Details")
+    .navigationBarTitle(Text("\(movie.title)'s Details"), displayMode: .inline)
     .onAppear {
       // Fetch reviews when the view appears
       if let id = movie.id {
