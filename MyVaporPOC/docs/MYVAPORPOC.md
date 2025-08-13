@@ -96,7 +96,7 @@ pytest test_myvaporpoc_api.py
 - Use **VaporTesting/XCTVapor** for native, isolated Swift endpoint+logic+DB tests.
 - Use **Pytest + Requests** for black-box, API-contract, and "external client" coverage.
 - Always auto-migrate your DB and robustly validate/handle errors at controller boundaries.
-- Integrate both suites into CI/CD for full coverage—as required by your MVP, QA, and Product acceptance criteria[^1][^2].
+- Integrate both suites into CI/CD for full coverage—as required by your MVP, QA, and Product acceptance criteria.
 - On every regression/feature: extend both test suites, repeat validation, review test output for all scenarios.
 
 This guarantees coverage that meets both best-practice and organizational goals for quality, client trust, and rapid, reliable deployment.

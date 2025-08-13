@@ -1,6 +1,6 @@
 # CI/CD Integration Examples
 
-## GitHub Actions Workflow
+## GitHub Actions Workflow (To be use now)
 
 ### Complete Backend Testing Pipeline
 
@@ -22,7 +22,7 @@ PYTHON_VERSION: "3.9"
 jobs:
 swift-tests:
 name: Swift VaporTesting Suite
-runs-on: macos-latest
+runs-on: ubuntu
 timeout-minutes: 10
 
     steps:
@@ -136,44 +136,6 @@ needs: swift-tests
           flags: api-tests
           name: api-coverage
     integration-tests:
-name: Full Integration Test Suite
-runs-on: macos-latest
-needs: [swift-tests, api-tests]
-if: github.event_name == 'pull_request'
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        
-      - name: Setup Swift and Python
-        uses: swift-actions/setup-swift@v1
-        with:
-          swift-version: ${{ env.SWIFT_VERSION }}
-          
-      - uses: actions/setup-python@v4
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          
-      - name: Install dependencies
-        run: |
-          swift package resolve
-          pip install pytest requests
-          
-      - name: Run comprehensive test suite
-        run: |
-          # Run Swift tests
-          swift test
-          
-          # Start server for API tests
-          swift run MyVaporPOC &
-          SERVER_PID=$!
-          sleep 15
-          
-          # Run API tests
-          pytest tests-python/ -v
-          
-          # Cleanup
-          kill $SERVER_PID
 ```
 
 ### Simplified Workflow for Development
@@ -189,7 +151,7 @@ branches: [ 'feature/*' ]
 
 jobs:
 quick-validation:
-runs-on: macos-latest
+runs-on: ubuntu
 timeout-minutes: 5
 
     steps:
@@ -208,74 +170,8 @@ timeout-minutes: 5
           curl -f http://localhost:8080/hello
 ```
 
-## GitLab CI Integration
 
-### `.gitlab-ci.yml`
-
-```yml
-  stages:
-
-  - build
-  - test
-  - integration
-
-  variables:
-  SWIFT_VERSION: "5.9"
-
-  before_script:
-
-  - swift --version
-
-  build:
-  stage: build
-  script:
-  - swift package resolve
-  - swift build
-  artifacts:
-  paths:
-  - .build/
-  expire_in: 1 hour
-
-  swift-tests:
-  stage: test
-  dependencies:
-  - build
-  script:
-  - swift test
-  coverage: '/Coverage: \d+\.\d+/'
-
-  api-tests:
-  stage: test
-  dependencies:
-  - build
-  before_script:
-  - python3 -m pip install pytest requests
-  script:
-  - swift run MyVaporPOC \&
-  - sleep 10
-  - pytest tests-python/ -v
-  after_script:
-  - pkill -f MyVaporPOC || true
-
-  integration:
-  stage: integration
-  dependencies:
-  - build
-  script:
-  - swift test
-  - swift run MyVaporPOC \&
-  - sleep 15
-  - python3 -m pip install pytest requests
-  - pytest tests-python/ -v --junit-xml=report.xml
-  artifacts:
-  reports:
-  junit: report.xml
-  only:
-  - merge_requests
-  - main
-```
-
-## Jenkins Pipeline
+## Jenkins Pipeline (To be set in the future)
 
 ### `Jenkinsfile`
 
@@ -408,9 +304,9 @@ EXPOSE 8080
 CMD ["MyVaporPOC"]
 ```
 
-### Docker Compose for Testing
+### Docker Compose for Testing (to be updated)
 
-```
+```yml
 version: '3.8'
 
 services:
@@ -453,7 +349,7 @@ pytest -v
 
 ### Coverage Requirements
 
-```
+```yml
 # In GitHub Actions
 
 - name: Check coverage threshold
@@ -467,7 +363,7 @@ fi
 
 ### Performance Benchmarks
 
-```
+```yml
 - name: Performance benchmarks
 run: |
 
@@ -491,9 +387,9 @@ fi
 
 ```
 
-### Notification Integration
+### Notification Integration (Slack would be useful for this)
 
-```
+```yml
 - name: Slack notification
 if: failure()
 uses: 8398a7/action-slack@v3
