@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:MyVaporPOC}",
+      "name": "Debug MyVaporPOC",
+      "program": "${workspaceFolder:MyVaporPOC}/.build/debug/MyVaporPOC",
+      "preLaunchTask": "swift: Build Debug MyVaporPOC"
+    },
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:MyVaporPOC}",
+      "name": "Release MyVaporPOC",
+      "program": "${workspaceFolder:MyVaporPOC}/.build/release/MyVaporPOC",
+      "preLaunchTask": "swift: Build Release MyVaporPOC"
+    }
+  ]
+}
