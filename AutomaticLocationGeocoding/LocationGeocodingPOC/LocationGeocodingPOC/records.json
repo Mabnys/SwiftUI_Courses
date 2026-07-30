@@ -1,0 +1,193 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "ObjectId": 243709,
+                "Street": "2171 STATE ROUTE 417",
+                "City": "GREENWOOD",
+                "State": "NY",
+                "ZIP": "14839"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 266895,
+                "Street": "5451 SHERIDAN DRIVE",
+                "City": "BUFFALO",
+                "State": "NY",
+                "ZIP": "14221"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 25767,
+                "Street": "838 SOUTH ROAD SOUTH HILLS MALL",
+                "City": "POUGHKEEPSIE",
+                "State": "NY",
+                "ZIP": "12601"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 35488,
+                "Street": "13255 ROUTE 23A",
+                "City": "PRATTSVILLE",
+                "State": "NY",
+                "ZIP": "12468"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 244223,
+                "Street": "110-26 106 STREET",
+                "City": "OZONE PARK",
+                "State": "NY",
+                "ZIP": "11417"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 30227,
+                "Street": "RD 1 BOX 78",
+                "City": "WINDHAM",
+                "State": "NY",
+                "ZIP": "12496"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 24467,
+                "Street": "11 W MAIN ST",
+                "City": "GRANVILLE",
+                "State": "NY",
+                "ZIP": "12832"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 34713,
+                "Street": "139 SARATOGA ROAD",
+                "City": "SOUTH GLENS FALLS",
+                "State": "NY",
+                "ZIP": "12803"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 212622,
+                "Street": "3105 EAST MAIN STREET",
+                "City": "MOHEGAN LAKE",
+                "State": "NY",
+                "ZIP": "10547"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 35687,
+                "Street": "1527 RIDGE ROAD",
+                "City": "LEWISTON",
+                "State": "NY",
+                "ZIP": "14092"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 265927,
+                "Street": "4930 MILLERSPORT HWY",
+                "City": "EAST AMHERST",
+                "State": "NY",
+                "ZIP": "14051"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 26972,
+                "Street": "ROUTE 37 ST REGIS BOULEVARD",
+                "City": "MASSENA",
+                "State": "NY",
+                "ZIP": "13662"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 233369,
+                "Street": "1851 EMPIRE BLVD",
+                "City": "WEBSTER",
+                "State": "NY",
+                "ZIP": "14580"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 29524,
+                "Street": "2722 EAST TREMONT AVENUE",
+                "City": "BRONX",
+                "State": "NY",
+                "ZIP": "10461"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 73968,
+                "Street": "38515 USH 11",
+                "City": "ANTWERP",
+                "State": "NY",
+                "ZIP": "13608"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 29629,
+                "Street": "1921 TONAWANDA CREEK ROAD",
+                "City": "AMHERST",
+                "State": "NY",
+                "ZIP": "14228"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 38468,
+                "Street": "2948 COUNTY RT 9",
+                "City": "EAST CHATHAM",
+                "State": "NY",
+                "ZIP": "12060"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 194868,
+                "Street": "367 SUNRISE HWY",
+                "City": "PATCHOGUE",
+                "State": "NY",
+                "ZIP": "11772"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 243219,
+                "Street": "6719 ROUTE 415 S.",
+                "City": "BATH",
+                "State": "NY",
+                "ZIP": "14810"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 25958,
+                "Street": "147 OLD NIAGARA FALLS BLVD",
+                "City": "AMHERST",
+                "State": "NY",
+                "ZIP": "14228"
+            }
+        },
+        {
+            "attributes": {
+                "ObjectId": 262711,
+                "Street": "4351 ROUTE 414",
+                "City": "BURDETT",
+                "State": "NY",
+                "ZIP": "14818"
+            }
+        }
+    ]
+}
