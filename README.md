@@ -11,6 +11,7 @@
 - Vapor is web framework for Swift, allowing you to write backends, web apps APIs and HTTP servers in Swift.
 - Vapor is written in Swift, which is a modern, powerful and safe language providing a number of benefits over the more traditional server languages.
 
+***
 
 # 2024 iOS Bootcamp
 
@@ -40,6 +41,7 @@ Your First iOS & SwiftUI App.
 - [x] Add the leaderboard screen
 - [x] Make the app look pretty :]
 
+***
 
 ## SwiftUI Tutorial: Navigation
 - In this tutorial, you’ll use SwiftUI to implement the navigation of a master-detail app.
@@ -50,6 +52,7 @@ Your First iOS & SwiftUI App.
 - [x] *@EnvironmentObjects* etc.
 - You’ll learn how to implement a navigation stack, a navigation bar button, a context menu and a modal sheet. By [Fabrizio Brancati]().
 
+***
 
 ## SwiftUI View Modifiers Tutorial for iOS
 - In this tutorial, you'll learn how to refactor your code to create powerful custom SwiftUI view modifiers.
@@ -60,3 +63,22 @@ Your First iOS & SwiftUI App.
 - [x] Creating modifiers with **conditional parameters**.
 - [x] **Extending views** to create reusable components.
 - You’ll learn how to make your views look consistent and your code easier to read and maintain. By [Danijela Vrzan]().
+
+***
+
+## Automatic Location Geocoding POC
+
+- Standalone SwiftUI proof-of-concept for batch address geocoding via the
+  NYS GeoHub ArcGIS geocoder, extracted from [PlantBOSS backend issue #237](https://github.com/ny-mobile/PlantBossBackend/issues/237).
+- Demonstrates request construction, response parsing, and resilience
+  patterns (chunking, retry/backoff, bisection) for a real-world
+  third-party API integration.
+- [x] Build and encode a `GeocodeRequest` payload matching a strict field
+  schema (`ObjectId`, `Street`, `City`, `State`, `ZIP`).
+- [x] Decode `GeocodeResponse` including `spatialReference` and `locations`.
+- [x] Display a "Formed Query URL" diagnostic card with tap-to-copy.
+- [x] Display Spatial Reference (WKID/latestWkid) metadata.
+- [x] Show geocoded matches with coordinates, score, and address attributes.
+- [x] Test against varying input sizes (2, 3, 6, 21, and 100 sample records).
+
+Service URL: https://nysgeohub.ny.gov/arcgis/rest/services/Geocoder/NYS_Geocoder/GeocodeServer/geocodeAddresses

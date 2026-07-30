@@ -1,0 +1,58 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "ObjectId": 41094,
+        "Street": "81 LAKE STREET",
+        "City": "LEROY",
+        "State": "NY",
+        "ZIP": "14482"
+      }
+    },
+    {
+      "attributes": {
+        "ObjectId": 257056,
+        "Street": "PO BOX 976",
+        "City": "WINDSOR",
+        "State": "CA",
+        "ZIP": "95492"
+      }
+    },
+    {
+      "attributes": {
+        "ObjectId": 41884,
+        "Street": "POB 566",
+        "City": "WATER MILL",
+        "State": "NY",
+        "ZIP": "11976"
+      }
+    },
+    {
+      "attributes": {
+        "ObjectId": 21433,
+        "Street": "POB 119 LAWN FERTILIZER DIVIS",
+        "City": "MAUMEE",
+        "State": "OH",
+        "ZIP": "43537"
+      }
+    },
+    {
+      "attributes": {
+        "ObjectId": 231376,
+        "Street": "5816 DECKER RD",
+        "City": "LIVONIA",
+        "State": "NY",
+        "ZIP": "14487"
+      }
+    },
+    {
+      "attributes": {
+        "ObjectId": 21760,
+        "Street": "PO BOX 64281",
+        "City": "ST. PAUL",
+        "State": "MN",
+        "ZIP": "55164"
+      }
+    }
+  ]
+}
